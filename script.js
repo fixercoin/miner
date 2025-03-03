@@ -1,31 +1,18 @@
-// Set Item
-localStorage.setItem("fixercoin", "0");
-// Retrieve
-document.getElementById("demo").innerHTML = localStorage.getItem("fixercoin");
 
-// Set Item
-localStorage.setItem("locker", "0");
-// Retrieve
-document.getElementById("demo").innerHTML = localStorage.getItem("locker");
 
-// Set Item
-localStorage.setItem("pusher", "0");
-// Retrieve
-document.getElementById("demo").innerHTML = localStorage.getItem("pusher");
+const blockchainSelect = document.getElementById('BLOCKCHAINSELECT');
 
-const blockchainSelect = document.getElementById('blockchainSelect');
+const startBtn = document.getElementById('STARTBTN');
 
-const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('STOPBTN');
 
-const stopBtn = document.getElementById('stopBtn');
+const miningStatus = document.getElementById('MININGSTATUS');
 
-const miningStatus = document.getElementById('miningStatus');
+const profitDisplay = document.getElementById('PROFITDISPLAY');
 
-const profitDisplay = document.getElementById('profitDisplay');
+const profitGraph = document.getElementById('PROFITGRAPH');
 
-const profitGraph = document.getElementById('profitGraph');
-
-const coinAnimation = document.getElementById('coinAnimation');
+const coinAnimation = document.getElementById('COINANIMATION');
 
 const miningProfits = {
 
