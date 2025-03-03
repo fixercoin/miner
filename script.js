@@ -1,4 +1,19 @@
- const blockchainSelect = document.getElementById('blockchainSelect');
+// Set Item
+localStorage.setItem("fixercoin", "0");
+// Retrieve
+document.getElementById("demo").innerHTML = localStorage.getItem("fixercoin");
+
+// Set Item
+localStorage.setItem("locker", "0");
+// Retrieve
+document.getElementById("demo").innerHTML = localStorage.getItem("locker");
+
+// Set Item
+localStorage.setItem("pusher", "0");
+// Retrieve
+document.getElementById("demo").innerHTML = localStorage.getItem("pusher");
+
+const blockchainSelect = document.getElementById('blockchainSelect');
 
 const startBtn = document.getElementById('startBtn');
 
@@ -90,7 +105,7 @@ function stopMining() {
 
     clearInterval(miningInterval);
 
-    updateMiningStatus('Mining stopped.');
+    updateMiningStatus('MINING STOPPED.');
 
     coinAnimation.innerHTML = '';
 
@@ -106,7 +121,7 @@ function mine(blockchain) {
 
     updateMiningStatus(`MINING ${blockchain.toUpperCase()}...`);
 
-    updateProfitDisplay(`Total Profit: ${totalProfit.toFixed(8)} ${blockchain.toUpperCase()} (estimated)`); // Display profit with 8 decimal places
+    updateProfitDisplay(`TOTAL PROFIT: ${totalProfit.toFixed(8)} ${blockchain.toUpperCase()} (estimated)`); // Display profit with 8 decimal places
 
     updateProfitGraph(profitData);
 
