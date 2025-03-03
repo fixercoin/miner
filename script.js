@@ -26,7 +26,7 @@ FIXERCOIN: 0.0000001,
 
 let miningInterval;
 
-let selectedBlockchain = 'bitcoin';
+let selectedBlockchain = 'FIXERCOIN';
 
 let miningStarted = false;
 
