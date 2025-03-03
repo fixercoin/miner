@@ -104,7 +104,7 @@ function mine(blockchain) {
 
     profitData.push(totalProfit.toFixed(8));
 
-    updateMiningStatus(`Mining ${blockchain.toUpperCase()}...`);
+    updateMiningStatus(`MINING ${blockchain.toUpperCase()}...`);
 
     updateProfitDisplay(`Total Profit: ${totalProfit.toFixed(8)} ${blockchain.toUpperCase()} (estimated)`); // Display profit with 8 decimal places
 
@@ -154,10 +154,10 @@ function resetDashboard() {
 
     profitData = [];
 
-    updateProfitDisplay(`Total Profit: 0 ${selectedBlockchain.toUpperCase()}`);
+    updateProfitDisplay(`TOTAL PROFIT it: 0 ${selectedBlockchain.toUpperCase()}`);
 
     profitGraph.innerHTML = '';
 
-    updateMiningStatus('Select a blockchain and start mining.');
+    updateMiningStatus('SELECT TOKEN AND START MINING.');
 
 }
