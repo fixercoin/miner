@@ -1,22 +1,20 @@
+ const blockchainSelect = document.getElementById('blockchainSelect');
 
+const startBtn = document.getElementById('startBtn');
 
-const blockchainSelect = document.getElementById('BLOCKCHAINSELECT');
+const stopBtn = document.getElementById('stopBtn');
 
-const startBtn = document.getElementById('STARTBTN');
+const miningStatus = document.getElementById('miningStatus');
 
-const stopBtn = document.getElementById('STOPBTN');
+const profitDisplay = document.getElementById('profitDisplay');
 
-const miningStatus = document.getElementById('MININGSTATUS');
+const profitGraph = document.getElementById('profitGraph');
 
-const profitDisplay = document.getElementById('PROFITDISPLAY');
-
-const profitGraph = document.getElementById('PROFITGRAPH');
-
-const coinAnimation = document.getElementById('COINANIMATION');
+const coinAnimation = document.getElementById('coinAnimation');
 
 const miningProfits = {
 
-    FIXERCOIN: 0.0000001,
+FIXERCOIN: 0.0000001,
 
     LOCKER: 0.0000001,
 
@@ -28,7 +26,7 @@ const miningProfits = {
 
 let miningInterval;
 
-let selectedBlockchain = 'FIXERCOIN';
+let selectedBlockchain = 'bitcoin';
 
 let miningStarted = false;
 
@@ -92,7 +90,7 @@ function stopMining() {
 
     clearInterval(miningInterval);
 
-    updateMiningStatus('MINING STOPPED.');
+    updateMiningStatus('Mining stopped.');
 
     coinAnimation.innerHTML = '';
 
@@ -106,9 +104,9 @@ function mine(blockchain) {
 
     profitData.push(totalProfit.toFixed(8));
 
-    updateMiningStatus(`MINING ${blockchain.toUpperCase()}...`);
+    updateMiningStatus(`Mining ${blockchain.toUpperCase()}...`);
 
-    updateProfitDisplay(`TOTAL PROFIT: ${totalProfit.toFixed(8)} ${blockchain.toUpperCase()} (estimated)`); // Display profit with 8 decimal places
+    updateProfitDisplay(`Total Profit: ${totalProfit.toFixed(8)} ${blockchain.toUpperCase()} (estimated)`); // Display profit with 8 decimal places
 
     updateProfitGraph(profitData);
 
@@ -156,10 +154,10 @@ function resetDashboard() {
 
     profitData = [];
 
-    updateProfitDisplay(`TOTAL PROFIT it: 0 ${selectedBlockchain.toUpperCase()}`);
+    updateProfitDisplay(`Total Profit: 0 ${selectedBlockchain.toUpperCase()}`);
 
     profitGraph.innerHTML = '';
 
-    updateMiningStatus('SELECT TOKEN AND START MINING.');
+    updateMiningStatus('Select a blockchain and start mining.');
 
 }
